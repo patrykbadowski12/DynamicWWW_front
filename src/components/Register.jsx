@@ -1,5 +1,6 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom'
+import LoginStyle from "../scss/LoginStyle.scss"
+import { Redirect, Link } from 'react-router-dom'
 
 class Register extends React.Component {
 
@@ -16,6 +17,10 @@ class Register extends React.Component {
         this.handleUsername = this.handleUsername.bind(this);
         this.handlePassword = this.handlePassword.bind(this);
         this.login = this.login.bind(this);
+
+    }
+
+    submitRegister(e){
 
     }
 
@@ -66,26 +71,36 @@ class Register extends React.Component {
             return <Redirect to='/login' />;
         }
         return (
+
             <div>
                 <div>
-                    <h1>{this.state.token}</h1>
                     <section className="login-block">
-                        <div className="container">
+                    <div className="root-container">
+                        <div className="box-container">
                             <div className="row ">
                                 <div className="col login-sec">
                                     <h2 className="text-center">Register</h2>
                                     <form className="login-form">
                                         <div className="form-group">
                                             <label className="text-uppercase">Username</label>
-                                            <input type="text" value={this.state.username} className="form-control" onChange={this.handleUsername} />
+                                            <input type="text" placeholder="username" value={this.state.username} className="form-control" onChange={this.handleUsername} />
                                             <label className="text-uppercase">Password</label>
-                                            <input type="text" value={this.state.password} className="form-control" onChange={this.handlePassword} />
-                                            <input type="submit" value="Register Account" className="btn btn-primary btn-login float-right" onClick={this.login} />
+                                            <input type="text" placeholder="password" value={this.state.password} className="form-control" onChange={this.handlePassword} />
+                                            <input type="submit" value="Register Account" className="btn btn-secondary btn-login float-right" onClick={this.login} />
                                         </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
+                        </div>
+                        <div className="root-container">
+                            <label htmlFor="     "></label>
+                    </div>
+                    <div className="root-container">
+                        <Link to="/login">
+                            <input type="submit" value="Login" className="btn btn-success btn-login float-right btn-lg" />
+                        </Link>
+                    </div>
                     </section>
                 </div>
             </div>
