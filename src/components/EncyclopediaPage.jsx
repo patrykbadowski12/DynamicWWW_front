@@ -1,15 +1,13 @@
 import React from 'react';
-import fetch from 'isomorphic-fetch';
-import ListBookElement from './ListBookElement';
 
-class Books extends React.Component {
+class EncyclopediaPage extends React.Component {
 
     constructor() {
         super();
         this.state = {
             token: localStorage.getItem('token'),
-            username: localStorage.getItem('username'),
-            books: []
+            encyclopedia: {},
+            registration: [],
         }
     }
 
@@ -18,7 +16,7 @@ class Books extends React.Component {
     }
 
     fetchBooks() {
-        var url = 'http://localhost:8080/books';
+        var url = 'http://localhost:8080/encyclopedia/' + this.props.match.params.id ;
         var bearer = 'Bearer ' + this.state.token;
         fetch(url, {
             method: 'GET',
@@ -36,7 +34,8 @@ class Books extends React.Component {
             }
         })
             .then(data => {
-                this.setState({ books: data });
+                this.setState({ encyclopedia: data });
+                this.setState({ registration: data.registration });
             }
             )
             .catch((error) => {
@@ -45,21 +44,23 @@ class Books extends React.Component {
     }
 
 
-
     render() {
-
         return (
             <div>
-                <h1>books</h1>
-                {this.state.books.length !== 0 ?
+                <h1>{this.state.encyclopedia.title}</h1>
+                {this.state.registration.size !== 0 ?
                     <div className="table-margin ">
-                            {this.state.books.map((item, index) =>
-                                        <ListBookElement book={item} key={index} id={index}/>
+                            {this.state.registration.map((item, index) =>
+                                <div key={index}>
+                                    <a>{item.author} </a>
+                                    <a>{item.content} </a>
+                                    <a>{item.date} </a>
+                                </div>
                                 )}
                     </div>
-                    : <span className="text-light" style={{ margin: '20px' }}>It's nothing to show</span>}
+                    : null}
             </div>
         )
     }
 }
-export default Books;
+export default EncyclopediaPage;

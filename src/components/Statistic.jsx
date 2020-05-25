@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Dashboard extends React.Component {
+class Statistic extends React.Component {
 
     constructor() {
         super();
@@ -14,9 +14,9 @@ class Dashboard extends React.Component {
 
         return (
             <div>
-                <h1>Dashboard</h1>
+                <h1>Statistic</h1>
             </div>
         )
     }
 }
-export default Dashboard;
+export default Statistic;

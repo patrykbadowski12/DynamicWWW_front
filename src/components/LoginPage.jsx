@@ -59,6 +59,7 @@ class LoginPage extends React.Component {
                 this.setState({token: data.token});
                 localStorage.setItem('token', data.token);
                 localStorage.setItem('username', this.state.username);
+                localStorage.setItem('isLogged', true);
             }
         )
         .catch((error) => {
@@ -66,8 +67,37 @@ class LoginPage extends React.Component {
         });
     }
 
+    fetchUserData() {
+        var url = 'http://localhost:8080/user?username=' + this.state.username;
+        var bearer = 'Bearer ' + this.state.token;
+        console.log(bearer)
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'authorization': bearer,
+            },
+            body: null
+        }).then((response) => {
+            if (response.ok) {
+                return response.json()
+            } else {
+                throw new Error('Error during fetch user data - response to ');
+            }
+        })
+            .then(data => {
+                localStorage.setItem('userRole', data.role);
+            }
+            )
+            .catch((error) => {
+                console.log('Error during fetch user data');
+            });
+    }
+
     render(){
         if (this.state.token !== undefined && this.state.token.length !== 0) {
+            this.fetchUserData();
             console.log("redirect")
             return <Redirect to='/dashboard' />;
         }
