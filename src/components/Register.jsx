@@ -84,7 +84,7 @@ class Register extends React.Component {
                                             <label className="text-uppercase">Username</label>
                                             <input type="text" placeholder="username" value={this.state.username} className="form-control" onChange={this.handleUsername} />
                                             <label className="text-uppercase">Password</label>
-                                            <input type="text" placeholder="password" value={this.state.password} className="form-control" onChange={this.handlePassword} />
+                                            <input type="password" placeholder="password" value={this.state.password} className="form-control" onChange={this.handlePassword} />
                                             <input type="submit" value="Register Account" className="btn btn-secondary btn-login float-right" onClick={this.login} />
                                         </div>
                                     </form>

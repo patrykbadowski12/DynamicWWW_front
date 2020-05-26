@@ -1,4 +1,5 @@
 import React from 'react';
+import LoginStyle from "../scss/LoginStyle.scss"
 
 class Dashboard extends React.Component {
 
@@ -13,9 +14,12 @@ class Dashboard extends React.Component {
     render() {
 
         return (
-            <div>
-                <h1>Dashboard</h1>
-            </div>
+            
+            <div className="box-text-background">
+
+                <col1> Welcome to our Library </col1>
+
+            </div> 
         )
     }
 }

@@ -44,19 +44,19 @@ class Navbar extends React.Component {
             <div>
                 <ul className="nav nav-tabs justify-content-center">
                     <li className="nav-item" >
-                        <Link to="/dashboard" className="nav-link">Main</Link>
+                        <Link to="/dashboard"> <button className="nav-link">Main</button> </Link>
                     </li>
                     <li className="nav-item" >
-                        <Link to="/books" className="nav-link">Books</Link>
+                        <Link to="/books"> <button className="nav-link">Books</button> </Link>
                     </li>
                     <li className="nav-item" >
-                        <Link to="/encyclopedies" className="nav-link">Encyclopedia</Link>
+                        <Link to="/encyclopedies"> <button className="nav-link">Encyclopedia </button> </Link>
                     </li>
                     {this.state.userRole === 'ADMIN' ?  <li className="nav-item" >
-                        <Link to="/admin" className="nav-link">Admin</Link>
+                        <Link to="/admin"> <button className="nav-link">Admin</button> </Link>
                     </li> : null }
                     <li className="nav-item" >
-                        <button className="nav-link" onClick={this.logout}>Logout</button>
+                        <Link to="/login"> <button className="nav-link" onClick={this.logout}>Logout</button> </Link>
                     </li>
                 </ul>
             </div>

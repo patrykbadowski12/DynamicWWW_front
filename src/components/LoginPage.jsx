@@ -4,6 +4,8 @@ import { Redirect, Link } from 'react-router-dom'
 
 class LoginPage extends React.Component {
 
+    
+
     constructor(){
         super();
         this.state = {
@@ -12,6 +14,7 @@ class LoginPage extends React.Component {
           token: '',
           responseStatus: 0,
           response : {}
+
         }
 
         this.handleUsername = this.handleUsername.bind(this);
@@ -117,7 +120,7 @@ class LoginPage extends React.Component {
                                             <label className="text-uppercase">Username</label>
                                             <input type="text" placeholder="username" value={this.state.username} className="form-control" onChange={this.handleUsername} />
                                             <label className="text-uppercase">Password</label>
-                                            <input type="text" placeholder="password" value={this.state.password} className="form-control" onChange={this.handlePassword} />
+                                            <input type="password" placeholder="password" value={this.state.password} className="form-control" onChange={this.handlePassword} />
                                             <input type="submit" value="Log in" className="btn btn-secondary btn-login float-right" onClick={this.login} />
                                         </div>
                                     </form>
