@@ -13,10 +13,10 @@ class RegistrationConfirm extends React.Component {
     }
 
     componentDidMount() {
-        this.fetchBooks();
+        this.fetchRegistration();
     }
 
-    fetchBooks() {
+    fetchRegistration() {
         var url = 'http://localhost:8080/admin/registration';
         var bearer = 'Bearer ' + this.state.token;
         fetch(url, {
@@ -48,9 +48,12 @@ class RegistrationConfirm extends React.Component {
 
         return (
             <div>
+<<<<<<< Updated upstream
                 <div className="box-text-background-header-admin">
                     <col2>Registration Confirm</col2>
                 </div>
+=======
+>>>>>>> Stashed changes
                 {this.state.registration.length !== 0 ?
                     <div className="table-margin ">
                             {this.state.registration.map((item, index) =>
