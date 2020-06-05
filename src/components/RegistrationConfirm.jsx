@@ -48,14 +48,16 @@ class RegistrationConfirm extends React.Component {
 
         return (
             <div>
-                <h1>RegistrationConfirm</h1>
+                <div className="box-text-background-header-admin">
+                    <col2>Registration Confirm</col2>
+                </div>
                 {this.state.registration.length !== 0 ?
                     <div className="table-margin ">
                             {this.state.registration.map((item, index) =>
                                         <RegistrationComponent key={index} registration={item} index={index}/>
                                 )}
                     </div>
-                    : <span className="text-light" style={{ margin: '20px' }}>It's nothing to show</span>}
+                    : <span className="box-text-background-admin">It's nothing to show</span>}
             </div>
         )
     }

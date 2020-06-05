@@ -55,8 +55,10 @@ class Encyclopedia extends React.Component {
 
         return (
             <div>
-                <h1>Encyclopedia</h1>
-                <AddRegistration encyclopedies={this.state.encyclopedies} />
+                <div className="box-text-background-header">
+                    <col1>Encyclopedia</col1>
+                </div>
+                < AddRegistration encyclopedies={this.state.encyclopedies} />
                 {this.state.encyclopedies.length !== 0 ?
                     <div className="table-margin ">
                         <table className="table table-striped table-dark ">
@@ -77,7 +79,7 @@ class Encyclopedia extends React.Component {
                             </tbody>
                         </table>
                     </div>
-                    : <span className="text-dark" style={{ margin: '20px' }}>It's nothing to show</span>}
+                    : <span className="box-text-background-header-book">It's nothing to show</span>}
             </div>
         )
     }

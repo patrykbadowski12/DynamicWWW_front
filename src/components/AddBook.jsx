@@ -15,8 +15,10 @@ class AddBook extends React.Component {
 
         return (
             <div>
-                <h1>AddBook</h1>
-                <form>
+                <div className="box-text-background-header-admin-addbook">
+                    <col2>AddBook</col2>
+                </div>
+                <form className="box-container-admin-addbook">
                     <div className="form-group">
                         <label htmlFor="inputAddress">Title</label>
                         <input type="text" className="form-control" />
@@ -34,7 +36,7 @@ class AddBook extends React.Component {
                     <input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"/>
                     <label className="form-check-label" htmlFor="inlineCheckbox1">{item}</label>
                 </div>)}
-                <button type='submit'>Add Book</button>
+                <button className="btn btn-secondary btn-login float-right" type='submit'>Add Book</button>
                 </form>
             </div>
         )

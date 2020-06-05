@@ -13,8 +13,8 @@ class Statistic extends React.Component {
     render() {
 
         return (
-            <div>
-                <h1>Statistic</h1>
+            <div className="box-text-background-header-admin">
+                <col2>Statistic</col2>
             </div>
         )
     }

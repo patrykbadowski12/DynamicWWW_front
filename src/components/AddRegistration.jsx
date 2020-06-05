@@ -59,9 +59,12 @@ class AddRegistration extends React.Component {
     render() {
         return (
             <div>
-            <button onClick={this.showRegistrationform}>Add registration</button>
-             {this.state.shouldShowRegistrationForm ? 
-            <form>
+            
+            <button1 type="button" className="btn btn-success btn-lg" onClick={this.showRegistrationform}>Add registration</button1>
+            
+            {this.state.shouldShowRegistrationForm ? 
+            
+            <form className="box-container-encyclopedia">
                 <div className="form-group">
                     <label>Example select</label>
                     <select className="form-control" onClick={this.handleSelectChange} >
@@ -71,11 +74,12 @@ class AddRegistration extends React.Component {
                     </select>
                 </div>
                 <div className="form-group">
-                    <label>Example textarea</label>
+                    <label>Example text area</label>
                     <textarea className="form-control" rows="3" value={this.props.content} onChange={this.handleContent}></textarea>
                 </div>
-                <button onClick={this.sendRegistration}>Submit</button>
+                <button className="btn btn-secondary btn-login float-right" onClick={this.sendRegistration}>Submit</button>
             </form> : null }
+            
             </div>
         )
     }

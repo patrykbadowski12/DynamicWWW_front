@@ -1,5 +1,6 @@
 import React from 'react';
 import fetch from 'isomorphic-fetch';
+import LoginStyle from "../scss/LoginStyle.scss"
 import ListBookElement from './ListBookElement';
 
 class Books extends React.Component {
@@ -50,14 +51,26 @@ class Books extends React.Component {
 
         return (
             <div>
-                <h1>books</h1>
-                {this.state.books.length !== 0 ?
-                    <div className="table-margin ">
-                            {this.state.books.map((item, index) =>
+                <div className="box-text-background-header">
+                    <col1>books </col1>
+                </div>
+                <table>
+                    <tr>
+                        <th>Position</th>
+                        <th>Title</th>
+                    </tr>
+                </table>
+                
+                    {this.state.books.length !== 0 ?
+                            <div>
+                                {this.state.books.map((item, index) =>
                                         <ListBookElement book={item} key={index} id={index}/>
+                                        
                                 )}
-                    </div>
-                    : <span className="text-light" style={{ margin: '20px' }}>It's nothing to show</span>}
+                            
+                            </div>
+                            
+                    : <span className="box-text-background-header-book" >It's nothing to show</span>}
             </div>
         )
     }

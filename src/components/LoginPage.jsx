@@ -1,10 +1,9 @@
 import React from 'react';
 import LoginStyle from "../scss/LoginStyle.scss"
+import fontello from "../icons/css/fontello.css"
 import { Redirect, Link } from 'react-router-dom'
-
 class LoginPage extends React.Component {
 
-    
 
     constructor(){
         super();
@@ -99,6 +98,7 @@ class LoginPage extends React.Component {
     }
 
     render(){
+        
         if (this.state.token !== undefined && this.state.token.length !== 0) {
             this.fetchUserData();
             console.log("redirect")
@@ -106,7 +106,7 @@ class LoginPage extends React.Component {
         }
     return (
 
-        
+
         <div>
             <div>
                 <section className="login-block">
@@ -137,6 +137,38 @@ class LoginPage extends React.Component {
                         </Link>
                     </div>
                 </section>
+            </div>
+            <div className="socials">
+                <div className="social-divs">
+                    <div> 
+                        <a href="https://www.facebook.com" target="_blank" >
+                            <div className="fb">
+                                <i class="icon-facebook"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.youtube.com" target="_blank" >
+                            <div className="yt">
+                                <i class="icon-youtube"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/explore" target="_blank" >
+                            <div className="tw">
+                                <i class="icon-twitter"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://myaccount.google.com" target="_blank" >
+                            <div className="gplus">
+                                <i class="icon-gplus"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     )}

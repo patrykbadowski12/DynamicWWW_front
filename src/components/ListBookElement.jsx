@@ -1,4 +1,5 @@
 import React from 'react';
+import LoginStyle from "../scss/LoginStyle.scss"
 
 
 class ListBookElement extends React.Component {
@@ -17,15 +18,25 @@ class ListBookElement extends React.Component {
     render() {
         return (
             <div>
-                <a scope='row'>{this.props.id+1}</a>
-                <a onClick={this.shouldShowDetails}>{this.props.book.title}</a>
+
+
+                <table>
+                <td><a scope='row'>{this.props.id+1}</a></td>
+                <td><a onClick={this.shouldShowDetails}>{this.props.book.title}</a></td>
+                </table>
+                <table>
                 {this.state.shouldShow ? 
                 <div>
-                    <a>{this.props.book.author}</a>
-                    <a>{this.props.book.releaseDate}</a>
-                    <a>{this.props.book.pages}</a>
+                    <tr>
+                        <th>Author</th>
+                        <th>Release Date</th>
+                        <th>Pages</th>
+                    </tr>
+                    <td><a>{this.props.book.author}</a></td>
+                    <td><a>{this.props.book.releaseDate}</a></td>
+                    <td><a>{this.props.book.pages}</a></td>
                 </div> : null}
-                
+                </table>
             </div>
         )
     }

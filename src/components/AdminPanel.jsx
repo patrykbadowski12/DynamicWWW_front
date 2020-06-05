@@ -17,7 +17,9 @@ class AdminPanel extends React.Component {
 
         return (
             <div>
-                <h1>Admin Panel</h1>
+                <div className="box-text-background-header">
+                    <col1>Admin Panel</col1>
+                </div>
                 <RegistrationConfirm/>
                 <Statistic/>
                 <AddBook/>
