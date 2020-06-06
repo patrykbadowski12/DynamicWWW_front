@@ -48,16 +48,10 @@ class RegistrationConfirm extends React.Component {
 
         return (
             <div>
-<<<<<<< Updated upstream
-                <div className="box-text-background-header-admin">
-                    <col2>Registration Confirm</col2>
-                </div>
-=======
->>>>>>> Stashed changes
                 {this.state.registration.length !== 0 ?
                     <div className="table-margin ">
                             {this.state.registration.map((item, index) =>
-                                        <RegistrationComponent key={index} registration={item} index={index}/>
+                                    <RegistrationComponent key={index} registration={item} index={index}/>
                                 )}
                     </div>
                     : <span className="box-text-background-admin">It's nothing to show</span>}

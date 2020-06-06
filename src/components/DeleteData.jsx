@@ -45,7 +45,7 @@ class DeleteData extends React.Component {
         return (
             
             <div>
-                <button onClick={this.deleteAllData}> DELETE ALL DATA</button>
+                <button className="btn btn-danger" onClick={this.deleteAllData}> DELETE ALL DATA</button>
             </div> 
         )
     }

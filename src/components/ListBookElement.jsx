@@ -1,5 +1,6 @@
 import React from 'react';
 import LoginStyle from "../scss/LoginStyle.scss"
+import Moment from 'react-moment';
 
 
 class ListBookElement extends React.Component {
@@ -33,8 +34,9 @@ class ListBookElement extends React.Component {
                         <th>Pages</th>
                     </tr>
                     <td><a>{this.props.book.author}</a></td>
-                    <td><a>{this.props.book.releaseDate}</a></td>
+                    <td><a><Moment format="YYYY-MM-DD HH:mm">{this.props.book.releaseDate}</Moment></a></td>
                     <td><a>{this.props.book.pages}</a></td>
+                    
                 </div> : null}
                 </table>
             </div>

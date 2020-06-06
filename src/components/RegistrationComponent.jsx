@@ -74,17 +74,28 @@ class RegistrationComponent extends React.Component {
     render() {
 
         return (
-            <div>
-                <a scope='row'>{this.props.index+1}</a>
-                <div>
-                    <a>{this.props.registration.author}</a>
-                    <a>{this.props.registration.content}</a>
-                    <a>{this.props.registration.date}</a>
-                    <button onClick={this.confirmRegistration}>Confirm</button>
-                    <button onClick={this.deleteRegistration}>Delete</button>
-                </div>}
+            <table className="table table-striped table-dark ">
+                <thead className="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col" >Login</th>
+                        <th scope="col">Text area</th>
+                        <th scope="col">Release Date</th>
+                        <th scope="col">Confirm</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>  
+                <th scope='row'>{this.props.index+1}</th>
                 
-            </div>
+                    <th>{this.props.registration.author}</th>
+                    <th>{this.props.registration.content}</th>
+                    <th>{this.props.registration.date}</th>
+                    <th><button onClick={this.confirmRegistration}>Confirm</button></th>
+                    <th><button onClick={this.deleteRegistration}>Delete</button></th>
+                
+            </tbody>
+            </table>
         )
     }
 }

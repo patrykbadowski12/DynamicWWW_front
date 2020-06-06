@@ -45,8 +45,6 @@ class Books extends React.Component {
             });
     }
 
-
-
     render() {
 
         return (
@@ -64,12 +62,9 @@ class Books extends React.Component {
                     {this.state.books.length !== 0 ?
                             <div>
                                 {this.state.books.map((item, index) =>
-                                        <ListBookElement book={item} key={index} id={index}/>
-                                        
+                                    <ListBookElement book={item} key={index} id={index}/>
                                 )}
-                            
                             </div>
-                            
                     : <span className="box-text-background-header-book" >It's nothing to show</span>}
             </div>
         )

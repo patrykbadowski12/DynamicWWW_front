@@ -40,24 +40,29 @@ class AdminPanel extends React.Component {
 
         return (
             <div>
-<<<<<<< Updated upstream
                 <div className="box-text-background-header">
                     <col1>Admin Panel</col1>
                 </div>
-                <RegistrationConfirm/>
-                <Statistic/>
-                <AddBook/>
-=======
-                <h1>Admin Panel</h1>
-                <h3 onClick={this.shouldShowRegistrationConfirm}>Confirm registration</h3>
+
+                <div className="box-text-background-header-admin" onClick={this.shouldShowRegistrationConfirm} >
+                    <col2>Registration Confirm</col2>
+                </div>
                 {this.state.registrationConfirm ? <RegistrationConfirm/> : null}
-                <h3 onClick={this.shouldShowStatistics}>Statistics</h3>
+
+                <div className="box-text-background-header-admin" onClick={this.shouldShowStatistics} >
+                    <col2>Statistic</col2>
+                </div>
                 {this.state.statistics ? <Statistic/> : null}
-                <h3 onClick={this.shouldShowAddBooks}>Add Book</h3>
+
+                <div className="box-text-background-header-admin-addbook" onClick={this.shouldShowAddBooks}>
+                    <col2>AddBook</col2>
+                </div>
                 {this.state.addBook ? <AddBook/> : null}
-                <h3 onClick={this.shouldShowDeleteData}>deleteData</h3>
+
+                <div className="box-text-background-header-admin" onClick={this.shouldShowDeleteData} >
+                    <col2>DeleteData</col2>
+                </div>
                 {this.state.deleteData ? <DeleteData/> : null}
->>>>>>> Stashed changes
             </div>
         )
     }

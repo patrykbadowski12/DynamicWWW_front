@@ -60,7 +60,7 @@ class Encyclopedia extends React.Component {
                 </div>
                 < AddRegistration encyclopedies={this.state.encyclopedies} />
                 {this.state.encyclopedies.length !== 0 ?
-                    <div className="table-margin ">
+                    <div className="table-margin1">
                         <table className="table table-striped table-dark ">
                             <thead className="thead-dark">
                                 <tr>

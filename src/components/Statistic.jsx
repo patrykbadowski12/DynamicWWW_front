@@ -58,31 +58,29 @@ class Statistic extends React.Component {
     render() {
         console.log(this.state.bookStatistic);
         return (
-<<<<<<< Updated upstream
-            <div className="box-text-background-header-admin">
-                <col2>Statistic</col2>
-=======
             <div>
-                <h4>Tu bedo statystyki</h4>
-                <form>
+            
+            <div>
+                <col3>Tu bedo statystyki</col3>
+                <form className="box-container-admin-statistic">
                     <div className="form-row">
                         <div className="col">
-                            <label>start date</label>
-                            <input type="text" className="form-control"  value={this.state.startDate} onChange={this.handleStartDate}/>
+                            <label>Start date</label>
+                            <input placeholder="YYYY-MM" type="text" className="form-control"  value={this.state.startDate} onChange={this.handleStartDate}/>
                         </div>
                         <div className="col">
-                            <label>end date</label>
-                            <input type="text" className="form-control" value={this.state.endDate} onChange={this.handleEndDate}/>
+                            <label>End date</label>
+                            <input placeholder="YYYY-MM" type="text" className="form-control" value={this.state.endDate} onChange={this.handleEndDate}/>
                         </div>
                     </div>
-                    <button onClick={this.fetchStatistics}> Confirm</button>
+                    <button className="btn btn-secondary btn-login float-right" type='submit' onClick={this.fetchStatistics}>Confirm</button>
                 </form>
                 {this.state.bookStatistic.length !== 0 ? 
                 <div>
-                     {Object.keys(this.state.bookStatistic).map((keyname, i) => 
+                    {Object.keys(this.state.bookStatistic).map((keyname, i) => 
                         <h1 key={i}>{keyname} {this.state.bookStatistic[keyname].length}</h1>)}
                 </div> : null}
->>>>>>> Stashed changes
+            </div>
             </div>
         )
     }

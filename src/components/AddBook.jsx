@@ -15,14 +15,8 @@ class AddBook extends React.Component {
 
         return (
             <div>
-<<<<<<< Updated upstream
-                <div className="box-text-background-header-admin-addbook">
-                    <col2>AddBook</col2>
-                </div>
+                
                 <form className="box-container-admin-addbook">
-=======
-                <form>
->>>>>>> Stashed changes
                     <div className="form-group">
                         <label htmlFor="inputAddress">Title</label>
                         <input type="text" className="form-control" />
