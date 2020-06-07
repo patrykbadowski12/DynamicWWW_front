@@ -25,6 +25,13 @@ col3 {
     text-transform: capitalize;
 }
 
+col4 {
+    color: #028dff;
+    font-weight: 50px;
+    font-size:30px ;
+    margin-left: 80px;
+    text-transform: capitalize;
+}
 
 }
 #root {
@@ -396,6 +403,7 @@ th {
     font-size: 25px;
 }
 
+
 td {
     margin-left: auto;
     margin-right: auto;
@@ -406,9 +414,17 @@ td {
 
 td1 {
     margin-left: 200px;
-
-
 }
+
+td2 {
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(0, 110, 255) ;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
 
 table, th, td {
     border: 3px solid black;
@@ -421,12 +437,20 @@ th, td {
     width: 250px;
 }
 
+tr1:nth-child(even) {
+    background-color:  rgb(136, 138, 127);
+}
+
+tr1:nth-child(odd) {
+    background-color: rgb(136, 138, 127);
+}
+
 tr:nth-child(even) {
-    background-color: #fff;
+    background-color:  #fff;
 }
 
 tr:nth-child(odd) {
-    background-color: #ddd;
+    background-color: #fff;
 }
 
 
@@ -449,6 +473,13 @@ button1 {
     margin-right: 200px;
 }
 
+.table-margin2 {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+
 .btn-danger {
     margin-left: 170px;
 }
+

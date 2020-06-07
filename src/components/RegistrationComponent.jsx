@@ -91,8 +91,8 @@ class RegistrationComponent extends React.Component {
                     <th>{this.props.registration.author}</th>
                     <th>{this.props.registration.content}</th>
                     <th>{this.props.registration.date}</th>
-                    <th><button onClick={this.confirmRegistration}>Confirm</button></th>
-                    <th><button onClick={this.deleteRegistration}>Delete</button></th>
+                    <th><button className="btn btn-success btn-login float-right" type='submit' onClick={this.confirmRegistration}>Confirm</button></th>
+                    <th><button className="btn btn-danger btn-login float-right" type='submit' onClick={this.deleteRegistration}>Delete</button></th>
                 
             </tbody>
             </table>

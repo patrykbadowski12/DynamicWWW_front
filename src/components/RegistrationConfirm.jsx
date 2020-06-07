@@ -48,6 +48,7 @@ class RegistrationConfirm extends React.Component {
 
         return (
             <div>
+                
                 {this.state.registration.length !== 0 ?
                     <div className="table-margin ">
                             {this.state.registration.map((item, index) =>

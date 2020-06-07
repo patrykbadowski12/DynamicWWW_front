@@ -61,7 +61,7 @@ class Statistic extends React.Component {
             <div>
             
             <div>
-                <col3>Tu bedo statystyki</col3>
+                <col3>Tu wyświetlą się statystyki</col3>
                 <form className="box-container-admin-statistic">
                     <div className="form-row">
                         <div className="col">

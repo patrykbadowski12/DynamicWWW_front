@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from 'react-moment';
 
 class EncyclopediaPage extends React.Component {
 
@@ -46,18 +47,27 @@ class EncyclopediaPage extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>{this.state.encyclopedia.title}</h1>
+            <div className="table-margin1">
+                <col4>{this.state.encyclopedia.title}</col4>
                 {this.state.registration.size !== 0 ?
-                    <div className="table-margin ">
+                    <table className="table table-striped table-dark ">
+                        <thead className="thead-dark">
+                            <tr>
+                                    <th scope="col">Author</th>
+                                    <th scope="col" >Content</th>
+                                    <th scope="col">Release Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                             {this.state.registration.map((item, index) =>
-                                <div key={index}>
-                                    <a>{item.author} </a>
-                                    <a>{item.content} </a>
-                                    <a>{item.date} </a>
-                                </div>
+                                <tr key={index}>
+                                    <th>{item.author}</th>
+                                    <th>{item.content}</th>
+                                    <th><Moment format="YYYY-MM-DD HH:mm">{item.date}</Moment></th>
+                                </tr>
                                 )}
-                    </div>
+                        </tbody>
+                    </table>
                     : null}
             </div>
         )
