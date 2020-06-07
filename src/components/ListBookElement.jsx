@@ -19,8 +19,6 @@ class ListBookElement extends React.Component {
     render() {
         return (
             <div>
-
-
                 <table>
                 <td><a scope='row'>{this.props.id+1}</a></td>
                 <td><a onClick={this.shouldShowDetails}>{this.props.book.title}</a></td>

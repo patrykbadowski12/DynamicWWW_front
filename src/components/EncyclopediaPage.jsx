@@ -48,7 +48,9 @@ class EncyclopediaPage extends React.Component {
     render() {
         return (
             <div className="table-margin1">
-                <col4>{this.state.encyclopedia.title}</col4>
+                <div className="box-text-background-header-encyclopedia">
+                    <col4>{this.state.encyclopedia.title}</col4>
+                </div>
                 {this.state.registration.size !== 0 ?
                     <table className="table table-striped table-dark ">
                         <thead className="thead-dark">

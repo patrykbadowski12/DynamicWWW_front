@@ -29,8 +29,10 @@ col4 {
     color: #028dff;
     font-weight: 50px;
     font-size:30px ;
-    margin-left: 80px;
+    //margin-left: 80px;
     text-transform: capitalize;
+    text-decoration: underline;
+    //text-shadow: 3px 3px 6px #4e3d2d;
 }
 
 }
@@ -150,6 +152,17 @@ $blue_theme: #70a1ff;
     padding: 7px;
     text-align: center ;
     background: rgba(236,236,236, 0.65) ;
+}
+
+.box-text-background-header-encyclopedia {
+    width: 30%;
+    margin-top: 50px;
+    margin-left: 35%;;
+    margin-bottom: 50px;
+    border-radius:30px;
+    padding: 7px;
+    text-align: center ;
+    background: rgba(236,236,236, 0.75) ;
 }
 
 .box-text-background-header-admin {
@@ -446,11 +459,11 @@ tr1:nth-child(odd) {
 }
 
 tr:nth-child(even) {
-    background-color:  #fff;
+    background-color:  rgb(200, 204, 182);
 }
 
 tr:nth-child(odd) {
-    background-color: #fff;
+    background-color: rgb(200, 204, 182);
 }
 
 
@@ -476,6 +489,16 @@ button1 {
 .table-margin2 {
     margin-left: 200px;
     margin-right: 200px;
+}
+
+.table-margin3 {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.table-margin4 {
+    margin-left: 50px;
+    margin-right: 1350px;
 }
 
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from 'react-moment';
 
 
 class RegistrationComponent extends React.Component {
@@ -74,6 +75,7 @@ class RegistrationComponent extends React.Component {
     render() {
 
         return (
+            <div className="table-margin3">
             <table className="table table-striped table-dark ">
                 <thead className="thead-dark">
                     <tr>
@@ -90,12 +92,13 @@ class RegistrationComponent extends React.Component {
                 
                     <th>{this.props.registration.author}</th>
                     <th>{this.props.registration.content}</th>
-                    <th>{this.props.registration.date}</th>
+                    <th><Moment format="YYYY-MM-DD HH:mm">{this.props.registration.date}</Moment></th>
                     <th><button className="btn btn-success btn-login float-right" type='submit' onClick={this.confirmRegistration}>Confirm</button></th>
                     <th><button className="btn btn-danger btn-login float-right" type='submit' onClick={this.deleteRegistration}>Delete</button></th>
                 
             </tbody>
             </table>
+            </div>
         )
     }
 }

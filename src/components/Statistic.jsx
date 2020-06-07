@@ -61,7 +61,7 @@ class Statistic extends React.Component {
             <div>
             
             <div>
-                <col3>Tu wyświetlą się statystyki</col3>
+                
                 <form className="box-container-admin-statistic">
                     <div className="form-row">
                         <div className="col">
@@ -75,12 +75,29 @@ class Statistic extends React.Component {
                     </div>
                     <button className="btn btn-secondary btn-login float-right" type='submit' onClick={this.fetchStatistics}>Confirm</button>
                 </form>
+                <col3>Statistics will be displayed here</col3>
+                <div className="table-margin4">
+                    
                 {this.state.bookStatistic.length !== 0 ? 
-                <div>
+                <table className="table table-striped table-dark ">
+                <thead className="thead-dark">
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col" >Number of books</th>
+            </tr>
+            </thead>
+            <tbody> 
                     {Object.keys(this.state.bookStatistic).map((keyname, i) => 
-                        <h1 key={i}>{keyname} {this.state.bookStatistic[keyname].length}</h1>)}
-                </div> : null}
-            </div>
+                        <tr key={i}>
+                            <th>{keyname} </th>
+                            <th>{this.state.bookStatistic[keyname].length}</th>
+                        </tr>)}
+                    </tbody>
+                </table>
+                : null}
+                
+                </div>
+                </div>
             </div>
         )
     }
