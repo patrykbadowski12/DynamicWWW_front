@@ -1,5 +1,4 @@
 import React from 'react';
-import fetch from 'isomorphic-fetch';
 import {Link } from 'react-router-dom';
 
 class Navbar extends React.Component {
@@ -15,28 +14,7 @@ class Navbar extends React.Component {
   }
 
   logout(){
-    var url = 'http://localhost:8080/logout';
-    fetch(url, {
-        method: 'GET',
-        credentials: 'include',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    }).then((response) => {
-        if (response.ok) {
-            this.setState({ responseStatus: response.status });
-            return response.json()
-        } else {
-            throw new Error('Error with logout');
-        }
-    })
-        .then(()  => {
-            localStorage.setItem('isLogged', false);
-        }
-    )
-    .catch((error) => {
-        console.log(error)
-    });
+    localStorage.clear();
 }
 
     render() {

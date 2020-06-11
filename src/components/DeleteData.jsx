@@ -15,8 +15,9 @@ class DeleteData extends React.Component {
         console.log("DELETE");
         var url = 'http://localhost:8080/admin/data/delete';
         var bearer = 'Bearer ' + this.state.token;
+        console.log(bearer);
         fetch(url, {
-            method: 'DELETE',
+            method: 'delete',
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
